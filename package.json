@@ -1,0 +1,30 @@
+{
+  "name": "claude-copilot-webhook",
+  "version": "0.0.1",
+  "description": "Opinionated webhook that replicates GitHub Copilot coding agent behavior using Claude Code GitHub Actions",
+  "main": "app.ts",
+  "scripts": {
+    "dev": "bun run --watch app.ts",
+    "start": "bun run app.ts",
+    "build": "bun build app.ts --outdir ./dist --target bun",
+    "lint": "tsc --noEmit",
+    "audit": "bun audit"
+  },
+  "keywords": [
+    "claude-code-action",
+    "github-copilot",
+    "webhook"
+  ],
+  "author": "etechlead",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/auth-app": "^8.0.1",
+    "@octokit/core": "^7.0.2",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.0.0",
+    "hono": "^4.8.3"
+  },
+  "devDependencies": {
+    "bun-types": "^1.0.0"
+  }
+}
